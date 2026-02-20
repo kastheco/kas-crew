@@ -1,9 +1,9 @@
 package config
 
 import (
-	"claude-squad/log"
 	"encoding/json"
 	"fmt"
+	"github.com/kastheco/kas-crew/log"
 	"os"
 	"os/exec"
 	"os/user"
@@ -23,7 +23,7 @@ func GetConfigDir() (string, error) {
 	if err != nil {
 		return "", fmt.Errorf("failed to get config home directory: %w", err)
 	}
-	return filepath.Join(homeDir, ".claude-squad"), nil
+	return filepath.Join(homeDir, ".kas-crew"), nil
 }
 
 // Config represents the application configuration

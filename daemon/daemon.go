@@ -1,10 +1,10 @@
 package daemon
 
 import (
-	"claude-squad/config"
-	"claude-squad/log"
-	"claude-squad/session"
 	"fmt"
+	"github.com/kastheco/kas-crew/config"
+	"github.com/kastheco/kas-crew/log"
+	"github.com/kastheco/kas-crew/session"
 	"os"
 	"os/exec"
 	"os/signal"
@@ -89,7 +89,7 @@ func RunDaemon(cfg *config.Config) error {
 
 // LaunchDaemon launches the daemon process.
 func LaunchDaemon() error {
-	// Find the claude squad binary.
+	// Find the kas-crew binary.
 	execPath, err := os.Executable()
 	if err != nil {
 		return fmt.Errorf("failed to get executable path: %w", err)

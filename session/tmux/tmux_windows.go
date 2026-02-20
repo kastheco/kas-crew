@@ -3,7 +3,7 @@
 package tmux
 
 import (
-	"claude-squad/log"
+	"github.com/kastheco/kas-crew/log"
 	"os"
 	"time"
 

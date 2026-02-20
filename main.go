@@ -1,30 +1,30 @@
 package main
 
 import (
-	"claude-squad/app"
-	cmd2 "claude-squad/cmd"
-	"claude-squad/config"
-	"claude-squad/daemon"
-	"claude-squad/log"
-	"claude-squad/session"
-	"claude-squad/session/git"
-	"claude-squad/session/tmux"
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/kastheco/kas-crew/app"
+	cmd2 "github.com/kastheco/kas-crew/cmd"
+	"github.com/kastheco/kas-crew/config"
+	"github.com/kastheco/kas-crew/daemon"
+	"github.com/kastheco/kas-crew/log"
+	"github.com/kastheco/kas-crew/session"
+	"github.com/kastheco/kas-crew/session/git"
+	"github.com/kastheco/kas-crew/session/tmux"
 	"path/filepath"
 
 	"github.com/spf13/cobra"
 )
 
 var (
-	version     = "1.0.14"
+	version     = "0.1.0"
 	programFlag string
 	autoYesFlag bool
 	daemonFlag  bool
 	rootCmd     = &cobra.Command{
-		Use:   "claude-squad",
-		Short: "Claude Squad - Manage multiple AI agents like Claude Code, Aider, Codex, and Amp.",
+		Use:   "kc",
+		Short: "kas-crew - Manage multiple AI coding agents with spec-kitty integration.",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			ctx := context.Background()
 			log.Initialize(daemonFlag)
@@ -44,7 +44,7 @@ var (
 			}
 
 			if !git.IsGitRepo(currentDir) {
-				return fmt.Errorf("error: claude-squad must be run from within a git repository")
+				return fmt.Errorf("error: kc must be run from within a git repository")
 			}
 
 			cfg := config.LoadConfig()
@@ -135,10 +135,10 @@ var (
 
 	versionCmd = &cobra.Command{
 		Use:   "version",
-		Short: "Print the version number of claude-squad",
+		Short: "Print the version number of kas-crew",
 		Run: func(cmd *cobra.Command, args []string) {
-			fmt.Printf("claude-squad version %s\n", version)
-			fmt.Printf("https://github.com/smtg-ai/claude-squad/releases/tag/v%s\n", version)
+			fmt.Printf("kas-crew version %s\n", version)
+			fmt.Printf("https://github.com/kastheco/kas-crew/releases/tag/v%s\n", version)
 		},
 	}
 )

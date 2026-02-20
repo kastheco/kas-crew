@@ -1,7 +1,7 @@
 package config
 
 import (
-	"claude-squad/log"
+	"github.com/kastheco/kas-crew/log"
 	"encoding/json"
 	"fmt"
 	"os"

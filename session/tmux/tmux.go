@@ -2,12 +2,12 @@ package tmux
 
 import (
 	"bytes"
-	"claude-squad/cmd"
-	"claude-squad/log"
 	"context"
 	"crypto/sha256"
 	"errors"
 	"fmt"
+	"github.com/kastheco/kas-crew/cmd"
+	"github.com/kastheco/kas-crew/log"
 	"io"
 	"os"
 	"os/exec"
@@ -57,7 +57,7 @@ type TmuxSession struct {
 	wg     *sync.WaitGroup
 }
 
-const TmuxPrefix = "claudesquad_"
+const TmuxPrefix = "kascrew_"
 
 var whiteSpaceRegex = regexp.MustCompile(`\s+`)
 

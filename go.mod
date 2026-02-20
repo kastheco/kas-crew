@@ -1,4 +1,4 @@
-module claude-squad
+module github.com/kastheco/kas-crew
 
 go 1.23.0
 

@@ -1,7 +1,7 @@
 package session
 
 import (
-	"claude-squad/config"
+	"github.com/kastheco/kas-crew/config"
 	"encoding/json"
 	"fmt"
 	"time"

@@ -1,11 +1,11 @@
 package app
 
 import (
-	"claude-squad/config"
-	"claude-squad/log"
-	"claude-squad/session"
-	"claude-squad/ui"
-	"claude-squad/ui/overlay"
+	"github.com/kastheco/kas-crew/config"
+	"github.com/kastheco/kas-crew/log"
+	"github.com/kastheco/kas-crew/session"
+	"github.com/kastheco/kas-crew/ui"
+	"github.com/kastheco/kas-crew/ui/overlay"
 	"context"
 	"fmt"
 	"os"

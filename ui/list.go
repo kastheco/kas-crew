@@ -1,8 +1,8 @@
 package ui
 
 import (
-	"claude-squad/log"
-	"claude-squad/session"
+	"github.com/kastheco/kas-crew/log"
+	"github.com/kastheco/kas-crew/session"
 	"errors"
 	"fmt"
 	"strings"

@@ -1,14 +1,14 @@
 package app
 
 import (
-	"claude-squad/config"
-	"claude-squad/keys"
-	"claude-squad/log"
-	"claude-squad/session"
-	"claude-squad/ui"
-	"claude-squad/ui/overlay"
 	"context"
 	"fmt"
+	"github.com/kastheco/kas-crew/config"
+	"github.com/kastheco/kas-crew/keys"
+	"github.com/kastheco/kas-crew/log"
+	"github.com/kastheco/kas-crew/session"
+	"github.com/kastheco/kas-crew/ui"
+	"github.com/kastheco/kas-crew/ui/overlay"
 	"os"
 	"time"
 
@@ -570,7 +570,7 @@ func (m *home) handleKeyPress(msg tea.KeyMsg) (mod tea.Model, cmd tea.Cmd) {
 		// Create the push action as a tea.Cmd
 		pushAction := func() tea.Msg {
 			// Default commit message with timestamp
-			commitMsg := fmt.Sprintf("[claudesquad] update from '%s' on %s", selected.Title, time.Now().Format(time.RFC822))
+			commitMsg := fmt.Sprintf("[kas-crew] update from '%s' on %s", selected.Title, time.Now().Format(time.RFC822))
 			worktree, err := selected.GetGitWorktree()
 			if err != nil {
 				return err

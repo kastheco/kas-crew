@@ -1,8 +1,8 @@
 package git
 
 import (
-	"claude-squad/config"
-	"claude-squad/log"
+	"github.com/kastheco/kas-crew/config"
+	"github.com/kastheco/kas-crew/log"
 	"fmt"
 	"path/filepath"
 	"time"

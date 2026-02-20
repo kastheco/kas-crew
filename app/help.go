@@ -1,10 +1,10 @@
 package app
 
 import (
-	"claude-squad/log"
-	"claude-squad/session"
-	"claude-squad/ui"
-	"claude-squad/ui/overlay"
+	"github.com/kastheco/kas-crew/log"
+	"github.com/kastheco/kas-crew/session"
+	"github.com/kastheco/kas-crew/ui"
+	"github.com/kastheco/kas-crew/ui/overlay"
 	"fmt"
 
 	tea "github.com/charmbracelet/bubbletea"
